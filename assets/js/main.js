@@ -137,7 +137,7 @@
     {
         "id": 8,
         "name": "C#",
-        "img": "c2.png"
+        "img": "c-sharp.png"
     }
   ]
   
