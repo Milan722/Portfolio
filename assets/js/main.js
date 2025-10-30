@@ -101,18 +101,18 @@
   var techs = [
     {
         "id": 1,
-        "name": "HTML",
-        "img": "html.png"
+        "name": "JavaScript",
+        "img": "js.png"
     },
     {
         "id": 2,
-        "name": "CSS",
-        "img": "css.png"
+        "name": "SpringBoot",
+        "img": "springbootlogo.png"
     },
     {
         "id": 3,
-        "name": "JavaScript",
-        "img": "js.png"
+        "name": "React",
+        "img": "reactlogo.png"
     },
     {
         "id": 4,
@@ -121,8 +121,8 @@
     },
     {
         "id": 5,
-        "name": "Bootstrap",
-        "img": "bootstrap.png"
+        "name": "Java",
+        "img": "javalogo.png"
     },
     {
         "id": 6,
