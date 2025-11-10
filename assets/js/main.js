@@ -67,7 +67,7 @@
         "title": "A Mechanic",
         "alt": "amechanic",
         "img": "amechanic.png",
-        "description": "Repair Service site",
+        "description": "Repair Service Site",
         "link": "https://milan722.github.io/AMechanic/",
         "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap","JQuery"],
         "isResponsive": true,
@@ -78,7 +78,7 @@
         "title": "SO Anicic",
         "alt": "soanicic",
         "img": "soanicic.png",
-        "description": "Dental office site ",
+        "description": "Dental Office Site ",
         "link": "https://milan722.github.io/SOAnicic/",
         "technologies": ["HTML", "CSS"],
         "isResponsive": false,
@@ -90,12 +90,24 @@
         "title": "Pekara Anicic",
         "alt": "pekaraanicic",
         "img": "pekaraanicic.png",
-        "description": "A Bakery site",
+        "description": "A Bakery Site",
         "link": "https://milan722.github.io/PekaraaAnicic/",
         "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap","JQuery"],
         "isResponsive": true,
         "year": 2025
         
+    },
+    {
+      "id": 4,
+        "title": "Milan Airlines",
+        "alt": "flightairlinemanagementsystem",
+        "img": "airline.png",
+        "description": "Flight & Airline Management Application",
+        "link": "https://github.com/Milan722/Airline",
+        "technologies": ["Spring Boot", "Java", "React"],
+        "isResponsive": true,
+        "year": 2025,
+        "buttonLabel": "View code"
     },
   ]
   var techs = [
@@ -186,7 +198,8 @@
   async function renderProjects(projectsArray){
     var html = ""
     projectsArray.forEach((p) => {
-      html += createACard(p.img, p.title, p.description, p.link, p.year, p.alt)
+      var buttonLabel = p.buttonLabel || "Visit website"
+      html += createACard(p.img, p.title, p.description, p.link, p.year, p.alt, buttonLabel)
     })
     projectsSection.innerHTML = html
   }
@@ -194,7 +207,8 @@
   
   async function renderModals(projects){
     projects.forEach((p) => {
-      createAProjectModal(p.alt, p.title, p.img, p.description, p.technologies, p.isResponsive, p.link, p.year)
+      var buttonLabel = p.buttonLabel || "Visit website"
+      createAProjectModal(p.alt, p.title, p.img, p.description, p.technologies, p.isResponsive, p.link, p.year, buttonLabel)
     })
   }
   renderModals(projects)
@@ -206,7 +220,7 @@
   }
   renderTechs() 
   
-  function createACard(img, title, desc, link, year, modalTarget){
+  function createACard(img, title, desc, link, year, modalTarget, buttonLabel){
     var html = `
     <div class="col">
       <div class="card h-100">
@@ -216,7 +230,7 @@
           <p class="card-text">${desc}</p>
           <p class="card-text">year: ${year}</p>
           <div class="align-self-end">
-            <a href="${link}" target="_blank" class="btn btn-primary">Visit website</a>
+            <a href="${link}" target="_blank" class="btn btn-primary">${buttonLabel}</a>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalTarget}">See more</button>
           </div>
         </div>
@@ -229,7 +243,7 @@
   
   }
   
-  function createAProjectModal(id, title, img, desc, tecs, isResponsive, link, year){
+  function createAProjectModal(id, title, img, desc, tecs, isResponsive, link, year, buttonLabel){
     var responsive = isResponsive ? "Yes" : "No";
     var technologies = tecs.join(", ");
     var html = `<div class="modal fade" id="${id}" tabindex="-1" aria-labelledby="${id}Label" aria-hidden="true">
@@ -243,13 +257,13 @@
           <img src="assets/img/portfolio/${img}" alt="${title}" class="img-fluid">
           <div class="mt-3">
             <p>Description: ${desc}</p>
-            <p>Languages: ${technologies}</p>
+            <p>Technologies: ${technologies}</p>
             <p>Responsive: ${responsive}</p>
             <p>Year: ${year}</p>
           </div>
         </div>
         <div class="modal-footer">
-          <a href="${link}" target="_blank" class="btn btn-primary">Visit website</a>
+          <a href="${link}" target="_blank" class="btn btn-primary">${buttonLabel}</a>
         </div>          
       </div>
     </div>
