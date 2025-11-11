@@ -94,7 +94,7 @@
         "link": "https://milan722.github.io/PekaraaAnicic/",
         "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap","JQuery"],
         "isResponsive": true,
-        "year": 2025
+        "year": 2024
         
     },
     {
