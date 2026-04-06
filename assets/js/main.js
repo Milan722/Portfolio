@@ -109,6 +109,18 @@
         "year": 2025,
         "buttonLabel": "View code"
     },
+     {
+      "id": 5,
+        "title": "LyfeStylo",
+        "alt": "fashionapp",
+        "img": "lyfestylo.png",
+        "description": "Fashion Retail Web Appliaction",
+        "link": "https://lyfestylo.infinityfree.me/",
+        "technologies": ["HTML", "CSS", "JavaScript","PHP","Bootstrap","JQuery"],
+        "isResponsive": true,
+        "year": 2026,
+        "buttonLabel": "View webapp"
+    },
   ]
   var techs = [
     {
