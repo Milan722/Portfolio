@@ -82,7 +82,7 @@ var projects = [
     "link": "https://milan722.github.io/SOAnicic/",
     "technologies": ["HTML", "CSS"],
     "isResponsive": false,
-    "year": 2023
+    "year": 2022
   },
 
   {
